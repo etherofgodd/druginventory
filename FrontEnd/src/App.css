@@ -1,0 +1,466 @@
+* {
+  box-sizing: border-box;
+}
+
+.main_container {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  grid-auto-rows: 100px 2fr auto;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+}
+
+.header {
+  grid-row: header;
+}
+
+.main {
+  grid-row: main;
+}
+.footer {
+  grid-row: footer;
+}
+
+.header {
+  display: flex;
+  background-color: #000000;
+  color: white;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-style: italic;
+}
+
+.logo {
+  grid-column: logo;
+}
+
+.header h1:hover,
+.header h1:active {
+  /* color: lightblue; */
+  background: rgba(100, 130, 139, 0.9);
+  border-radius: 5px;
+  width: 180px;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.header ul {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.header ul > li:hover {
+  color: lightblue;
+}
+
+.footer {
+  background: #000;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+}
+
+.header ul > li {
+  list-style: none;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.app {
+  margin: 20px;
+}
+.section {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.section_filter {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
+
+.section h1 {
+  text-align: center;
+  align-self: center;
+}
+
+.section input {
+  height: 40px;
+  width: 300px;
+  margin: 10px;
+}
+
+.section button {
+  height: 40px;
+  width: 100px;
+  background: #d63aff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card {
+  height: 150px;
+  background: white;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px #d63aff;
+  display: grid;
+  grid-template-areas: "info btn";
+  padding: 10px;
+  margin: 10px;
+}
+
+.card_ctn {
+  margin: 0 10px 10px 0;
+  justify-content: space-between;
+  border-right: 1px solid black;
+  padding-right: 10px;
+}
+
+.card .name {
+  font-size: larger;
+  font-weight: 700;
+}
+
+.card .cate {
+  font-size: larger;
+  font-weight: 600;
+  color: gray;
+}
+
+.card_btn {
+  background: #d63aff;
+  padding: 10px;
+  /* width: 60px; */
+}
+.card_btn > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.drugs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid gray;
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 1px 1px 1px 1px gray;
+}
+
+.signin .name {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input {
+  height: 50px;
+}
+
+.signin .password {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  height: 30px;
+  background: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+}
+
+.headerbtn {
+  margin: 0 10px 20px 20px;
+  background: #d63aff;
+  text-align: center;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn {
+  background: #000;
+  height: 50px;
+  cursor: pointer;
+}
+.regislink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.Link {
+  text-decoration: none;
+  color: white;
+}
+
+.admin {
+  display: grid;
+  grid-template-areas: "cate drug";
+  grid-template-columns: 4fr 4fr;
+  gap: 10px;
+}
+
+.category {
+  grid-column: cate;
+  border-right: 1px solid black;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+.category .label {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.category .cate_input {
+  height: 50px;
+  margin-bottom: 10px;
+  width: 250px;
+  padding: 20px;
+}
+
+.cate_btn {
+  height: 40px;
+  width: 250px;
+  color: white;
+  font-weight: 700;
+  text-decoration: solid;
+  background: #d63aff;
+  border: none;
+  cursor: pointer;
+}
+
+.drug {
+  grid-column: drug;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+}
+
+.drug .label {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.drug .drug_input {
+  height: 50px;
+  margin-bottom: 10px;
+  width: 250px;
+  padding: 10px;
+}
+
+.drug .drug_textArea {
+  height: 100px;
+  margin-bottom: 10px;
+  width: 250px;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.drug .categories_opt {
+  height: 50px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 250px;
+  color: white;
+  font-weight: 700;
+  text-decoration: solid;
+  text-transform: uppercase;
+  background: #d63aff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.drug_btn {
+  height: 40px;
+  width: 250px;
+  color: white;
+  font-weight: 700;
+  text-decoration: solid;
+  background: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.field {
+  margin: 20px;
+  padding: 10px;
+}
+
+.field_name {
+  font-size: 100px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.field_price {
+  font-weight: 900;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.field_price span {
+  margin: 10px;
+  font-weight: bolder;
+}
+
+.field_category {
+  font-size: 30px;
+  color: gray;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.field_category span {
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.field_dosage {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: tomato;
+}
+
+.field_dosage span {
+  font-weight: bolder;
+}
+
+.field_desc {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.field_effects {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+.field_effects span {
+  font-weight: bolder;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+
+.section .categories_opt {
+  height: 50px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 250px;
+  color: white;
+  font-weight: 700;
+  text-decoration: solid;
+  text-transform: uppercase;
+  background: #d63aff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.link a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: #d63aff;
+  padding: 10px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.table {
+  color: black;
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: 600;
+}
+
+.table td,
+.table th {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th {
+  background-color: #343436;
+  color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: gray;
+}
+
+.table_btn {
+  width: 70px;
+  border: none;
+  margin-right: 10px;
+  font-weight: 600;
+  height: 40px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.update {
+  margin: 10px;
+}
